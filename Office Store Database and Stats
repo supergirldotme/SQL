@@ -1,0 +1,21 @@
+CREATE TABLE store (id INTEGER, item TEXT, price INTEGER, aisle INTEGER, quantity INTEGER, color TEXT);
+
+INSERT INTO store VALUES (1, "jumbo paper clips", 2, 4, 50, "silver");
+INSERT INTO store VALUES (2, "scissors", 4, 4, 15, "black");
+INSERT INTO store VALUES (3, "packing tape", 3, 8, 13, "clear");
+INSERT INTO store VALUES (4, "calculators", 18, 8, 11, "grey");
+INSERT INTO store VALUES (5, "rulers", 2, 1, 25, "brown");
+INSERT INTO store VALUES (6, "binder clips", 4, 4, 40,  "black");
+INSERT INTO store VALUES (7, "notebooks", 6, 3, 100, "multi");
+INSERT INTO store VALUES (8, "folders", 8, 4, 500, "manila");
+INSERT INTO store VALUES (9, "staplers", 7, 5, 30, "black");
+INSERT INTO store VALUES (10, "pencils", 4, 7, 200, "yellow");
+INSERT INTO store VALUES (11, "pens", 4, 7, 200, "blue");
+INSERT INTO store VALUES (12, "highlighters", 4, 7, 100, "multi");
+INSERT INTO store VALUES (13, "postit notes", 9, 3, 35, "yellow");
+INSERT INTO store VALUES (14, "copy paper", 25, 10, 80, "white");
+INSERT INTO store VALUES (15, "calendars", 13, 5, 50, "various");
+
+SELECT * from store ORDER BY price;
+
+SELECT aisle, SUM(quantity) from store GROUP BY aisle
